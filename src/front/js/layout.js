@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
+import { Login } from "./pages/login";
+import { SignUp } from "./pages/signUp";
 import { Single } from "./pages/single";
 import Logout from "./pages/logout"; 
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
-import { Login } from "./component/login";
+import { UserPage } from "./component/userPage";
 import Private from "./component/private"; 
 
 const Layout = () => {
@@ -17,13 +17,13 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Private><Demo /></Private>} path="/demo" />
+                        <Route element={<Login />} path="/" />
+                        <Route element={<Private><SignUp /></Private>} path="/signUp" />
                         <Route element={<Private><Single /></Private>} path="/single/:theid" />
                         <Route element={<Logout />} path="/logout" /> 
                        
                     </Routes>
-                    <Login />
+                    <UserPage />
                 </ScrollToTop>
             </BrowserRouter>
         </div>

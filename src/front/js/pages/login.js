@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 
-export const Home = () => {
+export const UserPage = () => {
     const { actions } = useContext(Context);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

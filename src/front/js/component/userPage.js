@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Context } from "../store/appContext";
 
-export const Login = () => {
+export const UserPage  = () => {
     const { actions } = useContext(Context);
     const [welcomeMessage, setWelcomeMessage] = useState('');
     const navigate = useNavigate();
