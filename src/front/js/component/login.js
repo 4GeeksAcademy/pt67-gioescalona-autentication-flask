@@ -4,9 +4,6 @@ import { Context } from "../store/appContext";
 
 export const Login = () => {
     const { actions } = useContext(Context);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [welcomeMessage, setWelcomeMessage] = useState('');
     const navigate = useNavigate();
 
@@ -19,14 +16,6 @@ export const Login = () => {
             alert("Login failed, please check your credentials");
         }
     }, []);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const success = await actions.login(name, email, password);
-        if (success) {
-            setWelcomeMessage('Welcome to the page!'); 
-        } 
-    };
 
     return (
         <div className="container d-flex justify-content-center align-items-center vh-100 bg-light">
