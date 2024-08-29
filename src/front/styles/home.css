@@ -1,7 +1,46 @@
-/*
-    home.css: This website contains selectors only used in home.css
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Fondo claro */
+}
+
+.container {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    padding: 30px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
